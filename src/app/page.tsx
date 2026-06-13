@@ -4,23 +4,20 @@ import { AskPanel } from "@/components/ask/AskPanel";
 
 export default function Home() {
   return (
-    <main className="mx-auto flex min-h-screen max-w-2xl flex-col gap-8 px-6 py-16">
-      <header className="space-y-2">
-        <div className="flex items-baseline justify-between">
-          <h1 className="text-3xl font-semibold tracking-tight">Regradar</h1>
-          <nav className="flex gap-4 text-sm">
-            <Link href="/search" className="text-primary underline-offset-4 hover:underline">
-              Search
-            </Link>
-            <Link href="/documents" className="text-primary underline-offset-4 hover:underline">
-              Documents
-            </Link>
-          </nav>
-        </div>
+    <main className="mx-auto flex w-full max-w-2xl flex-col gap-8 px-6 py-12">
+      <header className="space-y-3">
+        <h1 className="text-3xl font-semibold tracking-tight">Ask the Federal Register</h1>
         <p className="text-muted-foreground">
-          Ask a question about U.S. Federal Register regulations. Answers are grounded in retrieved
-          documents and cite their sources — and the system tells you honestly when it does not have
-          the information.
+          Get grounded, cited answers about U.S. regulations — and an honest “I don’t have
+          information on that” when the answer isn’t in the record. You can also{" "}
+          <Link href="/search" className="text-primary underline-offset-4 hover:underline">
+            search passages
+          </Link>{" "}
+          or{" "}
+          <Link href="/documents" className="text-primary underline-offset-4 hover:underline">
+            browse documents
+          </Link>
+          .
         </p>
       </header>
       <AskPanel />

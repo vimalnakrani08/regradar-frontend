@@ -1,7 +1,9 @@
-import Link from "next/link";
+import type { Metadata } from "next";
 
 import { SearchBar } from "@/components/search/SearchBar";
 import { SearchResults } from "@/components/search/SearchResults";
+
+export const metadata: Metadata = { title: "Search" };
 
 const MIN_QUERY = 3;
 
@@ -15,14 +17,9 @@ export default async function SearchPage({
   const hasQuery = query.length >= MIN_QUERY;
 
   return (
-    <main className="mx-auto flex min-h-screen max-w-2xl flex-col gap-8 px-6 py-16">
+    <main className="mx-auto flex w-full max-w-2xl flex-col gap-8 px-6 py-12">
       <header className="space-y-2">
-        <div className="flex items-baseline justify-between">
-          <h1 className="text-3xl font-semibold tracking-tight">Search</h1>
-          <Link href="/" className="text-sm text-primary underline-offset-4 hover:underline">
-            Ask a question →
-          </Link>
-        </div>
+        <h1 className="text-3xl font-semibold tracking-tight">Search</h1>
         <p className="text-muted-foreground">
           Find Federal Register passages by meaning, not just keywords.
         </p>

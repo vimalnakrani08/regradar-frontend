@@ -1,6 +1,8 @@
-import Link from "next/link";
+import type { Metadata } from "next";
 
 import { DocumentList } from "@/components/documents/DocumentList";
+
+export const metadata: Metadata = { title: "Documents" };
 
 export default async function DocumentsPage({
   searchParams,
@@ -11,14 +13,9 @@ export default async function DocumentsPage({
   const pageNum = Math.max(1, Number(page) || 1);
 
   return (
-    <main className="mx-auto flex min-h-screen max-w-2xl flex-col gap-8 px-6 py-16">
+    <main className="mx-auto flex w-full max-w-2xl flex-col gap-8 px-6 py-12">
       <header className="space-y-2">
-        <div className="flex items-baseline justify-between">
-          <h1 className="text-3xl font-semibold tracking-tight">Documents</h1>
-          <Link href="/" className="text-sm text-primary underline-offset-4 hover:underline">
-            Ask a question →
-          </Link>
-        </div>
+        <h1 className="text-3xl font-semibold tracking-tight">Documents</h1>
         <p className="text-muted-foreground">
           Recent U.S. Federal Register documents, most recently published first.
         </p>
