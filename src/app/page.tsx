@@ -8,9 +8,14 @@ export default function Home() {
       <header className="space-y-2">
         <div className="flex items-baseline justify-between">
           <h1 className="text-3xl font-semibold tracking-tight">Regradar</h1>
-          <Link href="/search" className="text-sm text-primary underline-offset-4 hover:underline">
-            Search →
-          </Link>
+          <nav className="flex gap-4 text-sm">
+            <Link href="/search" className="text-primary underline-offset-4 hover:underline">
+              Search
+            </Link>
+            <Link href="/documents" className="text-primary underline-offset-4 hover:underline">
+              Documents
+            </Link>
+          </nav>
         </div>
         <p className="text-muted-foreground">
           Ask a question about U.S. Federal Register regulations. Answers are grounded in retrieved
