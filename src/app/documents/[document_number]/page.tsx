@@ -20,7 +20,7 @@ export default async function DocumentDetailPage({
   const { document_number } = await params;
 
   return (
-    <main className="mx-auto flex w-full max-w-2xl flex-col gap-8 px-6 py-12">
+    <main className="mx-auto flex w-full max-w-3xl flex-col gap-8 px-6 py-12">
       <Link href="/documents" className="text-sm text-primary underline-offset-4 hover:underline">
         ← All documents
       </Link>

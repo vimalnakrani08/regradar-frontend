@@ -37,8 +37,10 @@ export async function DocumentList({ page }: { page: number }) {
 
   return (
     <div className="space-y-6">
-      <p className="text-sm text-muted-foreground">{data.count} documents</p>
-      <ul className="space-y-3">
+      <p className="text-sm text-muted-foreground">
+        {data.count.toLocaleString()} documents
+      </p>
+      <ul className="border-t border-border">
         {data.results.map((document) => (
           <DocumentCard key={document.document_number} document={document} />
         ))}
